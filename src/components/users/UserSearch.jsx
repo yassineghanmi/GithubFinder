@@ -16,6 +16,7 @@ function UserSearch() {
         type: "SET_LOADING",
       });
       const data = await searchUsers(text);
+      console.log(data)
       dispatch({
         type: "GET_USERS",
         payload: data,

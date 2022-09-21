@@ -2,13 +2,8 @@ import axios from "axios";
 
 export const searchUsers = async (text) => {
   const { data } = await axios.get(
-    `https://api.github.com/search/users?q=${text}`,
-    {
-      headers: {
-        Authorization: `Bearer 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`,
-      },
-    }
-  );
+    `https://api.github.com/search/users?q=${text}`
+  )
   return data.items;
 };
 export const getUserAndRepos = async (login) => {
